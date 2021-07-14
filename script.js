@@ -16,6 +16,24 @@ const colors = {
 	fighting: '#E6E0D4',
 	normal: '#F5F5F5'
 };
+
+const name_types = {
+	fire: 'Fuego',
+	grass: 'Césped',
+	electric: 'Eléctrico',
+	water: 'Agua',
+	ground: 'Tierra',
+	rock: 'Roca',
+	fairy: 'Hada',
+	poison: 'Veneno',
+	bug: 'Bicho',
+	dragon: 'Dragon',
+	psychic: 'Psíquico',
+	flying: 'Volador',
+	fighting: 'Luchador',
+	normal: 'Normal'
+};
+
 const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
@@ -53,7 +71,7 @@ function createPokemonCard(pokemon) {
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Type: <span>${type}</span></small>
+            <small class="type"></small>Tipo: <span>${name_types[type]}</span></small>
         </div>
     `;
 
